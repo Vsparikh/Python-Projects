@@ -18,7 +18,7 @@ score_2 = 0
 
 #objects
 
-#Paddle A
+#Paddle 1
 p_a = turtle.Turtle()
 p_a.speed(0)
 p_a.shape("square")
@@ -27,7 +27,7 @@ p_a.shapesize(stretch_wid=5,stretch_len=1)
 p_a.penup()
 p_a.goto(-350, 0)
 
-#paddle B
+#paddle 2
 p_b = turtle.Turtle()
 p_b.speed(0)
 p_b.shape("square")
