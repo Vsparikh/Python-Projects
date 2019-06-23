@@ -60,7 +60,7 @@ msg1.color("white")
 msg1.penup()
 msg1.hideturtle()
 msg1.goto(-397,-290)
-msg1.write("Move using 'w' and 's'", font=("courier", 10, "normal"))
+msg1.write("Move using 'w' and 's'", font=("Comic Sans MS", 10, "normal"))
 
 msg2 = turtle.Turtle()
 msg2.speed(0)
@@ -68,7 +68,7 @@ msg2.color("white")
 msg2.penup()
 msg2.hideturtle()
 msg2.goto(180,-290)
-msg2.write("Move using 'Up' and 'Down'", font=("courier", 10, "normal"))
+msg2.write("Move using 'Up' and 'Down'", font=("Comic Sans MS", 10, "normal"))
 
 
 # functions
@@ -103,7 +103,7 @@ while True:
 
     #write the current score
     ink.clear()
-    ink.write(f"Player 1: {score_1}  Player 2: {score_2}", align="center", font=("courier", 24, "normal"))
+    ink.write(f"Player 1: {score_1}  Player 2: {score_2}", align="center", font=("Comic Sans MS", 24))
 
     #move the ball
     x_ball = ball.xcor() + ball.x
@@ -139,4 +139,4 @@ while True:
         ball.setx(-340)
         ball.x = ball.x*-1
 
-#end of while loop  
+#end of while loop
