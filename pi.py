@@ -1,3 +1,5 @@
+#calculating 1 million digits of Pi using Chudnovsky algorithm
+
 import math
 from decimal import *
 getcontext().prec = 1000000
