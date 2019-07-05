@@ -30,8 +30,8 @@ def GeneratePoints():
     global num_points
     global points
     for i in range(0, num_points):
-        x = random.randint(0, win_width - 200)
-        y = random.randint(200, win_height)
+        x = random.randint(10, win_width - 50)
+        y = random.randint(200, win_height-50)
         pos = [x, y]
         points.append(pos)
 
@@ -44,7 +44,6 @@ def drawPoints():
 
 
 def drawPath(array):
-
     g.display.update()
     win.fill((255, 255, 255))
     for i in range(0,num_points):
@@ -55,11 +54,13 @@ def drawPath(array):
         g.draw.line(win, (66, 87, 255), array[i], array[i+1], 5)
     g.draw.line(win, (66, 87, 255), array[0], array[num_points-1], 5)
     if counter < total_poss:
-        text1 = font.render("Minimum Tour Length: {}".format(min_d_bf), 1, (0, 0, 0))
-        text2 = font.render("Iterations: {}".format(counter), 1, (0, 0, 0))
+        text1 = font.render("Points/Cities: {}".format(num_points), 1, (0, 0, 0))
+        text2 = font.render("Minimum Tour Length: {}".format(min_d_bf), 1, (0, 0, 0))
+        text3 = font.render("Iterations: {}".format(counter), 1, (0, 0, 0))
 
         win.blit(text1, (10, 0))
         win.blit(text2, (10, 20))
+        win.blit(text3, (10, 40))
 
     g.time.delay(10)
 
@@ -132,11 +133,15 @@ while flag:
 
     if counter >= total_poss:
         drawPath(shortest_path_bf)
-        text1 = font.render("Minimum Tour Length Using Random Samples: {}".format(min_d_ran), 1, (0, 0, 0))
-        text2 = font.render("Minimum Tour Length using Brute Force: {}".format(min_d_bf), 1, (0, 0, 0))
+        text1 = font.render("Points/Cities: {}".format(num_points), 1, (0, 0, 0))
+        text2 = font.render("Minimum Tour Length Using Random Samples: {}".format(min_d_ran), 1, (0, 0, 0))
+        text3 = font.render("Minimum Tour Length using Brute Force: {}".format(min_d_bf), 1, (0, 0, 0))
+        text4 = font.render("Total Iterations: {}".format(counter), 1, (0, 0, 0))
 
         win.blit(text1, (10, 0))
         win.blit(text2, (10, 20))
+        win.blit(text3, (10, 40))
+        win.blit(text3, (10, 60))
     else:
         TspBf(points, num_points, num_points)
 
