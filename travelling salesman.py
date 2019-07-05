@@ -61,7 +61,6 @@ def drawPath(array):
         win.blit(text1, (10, 0))
         win.blit(text2, (10, 20))
         win.blit(text3, (10, 40))
-
     g.time.delay(10)
 
 
@@ -141,7 +140,7 @@ while flag:
         win.blit(text1, (10, 0))
         win.blit(text2, (10, 20))
         win.blit(text3, (10, 40))
-        win.blit(text3, (10, 60))
+        win.blit(text4, (10, 60))
     else:
         TspBf(points, num_points, num_points)
 
