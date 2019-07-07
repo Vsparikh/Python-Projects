@@ -1,3 +1,4 @@
+# paste the code on this website to try without downloading pygame: https://repl.it/languages/pygame
 import random
 import pygame as g
 import math
