@@ -1,5 +1,6 @@
 # Fourier Series Visualization {square wave}
-
+# paste the code on this website to try without downloading pygame: https://repl.it/languages/pygame
+    
 import math
 import pygame as g
 
