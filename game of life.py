@@ -15,8 +15,8 @@ font = g.font.SysFont('Verdana', 20)
 clock = g.time.Clock()
 win.fill((255, 255, 255))
 
-#length of each square in the game
-square_size = 30
+# length of each square in the game
+square_size = 50
 
 rows = int(win_width/square_size)
 cols = int(win_height/square_size)
@@ -41,13 +41,10 @@ def fill_array():
 # size of the array: rows x cols
 
 
-def fill_array_ran():
-    n = []
+def fill_array_ran(n):
     for i in range(rows):
-        r = []
         for j in range(cols):
-            r.append(random.randint(0, 1))
-        n.append(r)
+            n[i][j] = random.randint(0, 1)
     return n
 
 # prints the game of life grid on the pygame window
@@ -137,7 +134,7 @@ while user_change:
         if 10 <= pos[0] <= 70 and win_height+10 <= pos[1] <= win_height+40:
             user_change = False
         if win_width - 120 <= pos[0] <= win_width - 20 and win_height+10 <= pos[1] <= win_height+40:
-            matrix = fill_array_ran()
+            matrix = fill_array_ran(matrix)
             show_matrix()
 
         clicked_box = input_check(pos)
